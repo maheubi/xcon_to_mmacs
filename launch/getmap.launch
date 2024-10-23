@@ -1,0 +1,8 @@
+<launch>
+
+  <arg name="mymap" default="$(find xcon_to_mmacs)/maps/newmap.yaml"/>
+
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg mymap)" />
+
+</launch>

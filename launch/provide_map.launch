@@ -1,0 +1,11 @@
+<launch>
+
+  <arg name="map_file" default="$(find xcon_to_mmacs)/maps/empty_labor.yaml"/>
+  <arg name="base_frame"  default="base_link"/>
+  <arg name="odom_frame"  default="odom"/>
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+  
+  <param name="base_frame" value="$(arg base_frame)"/>
+  <param name="odom" value="$(arg odom_frame)"/>  
+</launch>

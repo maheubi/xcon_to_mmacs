@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+    <master auto="start"/>
+    <arg name="stereo" default="true"/>
+	<arg name="globalplan" default="false"/>
+	<!--Added statement-->
+ 
+	
+            <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
+                <remap from="cmd_vel" to="/cmd_vel"/>
+                <remap from="odom" to= "/odometry/filtered"/>
+                <rosparam file="$(find xcon_to_mmacs)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+                <rosparam file="$(find xcon_to_mmacs)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+                <rosparam file="$(find xcon_to_mmacs)/params/local_costmap_params.yaml" command="load" />
+                <rosparam file="$(find xcon_to_mmacs)/params/global_costmap_params.yaml" command="load" />
+                <rosparam file="$(find xcon_to_mmacs)/params/base_local_planner_params.yaml" command="load" />
+                <param name ="GlobalPlanner/use_dijkstra " value="false" />
+                <param name ="TrajectoryPlannerROS/dwa" value="false" />
+                <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
+                <!--param name="recovery_behaviors" value="[{name: conservative_reset, type: clear_costmap_recovery/ClearCostmapRecovery}, {name: aggressive_reset, type: clear_costmap_recovery/ClearCostmapRecovery}]"/ does not prevent the robot from clearing turns or path finding turns-->
+                <!-- also clearing_rotation_allowed does not prevent the robot from path finding turns -->
+                <param name="clearing_rotation_allowed" value="true" />
+                <param name="recovery_behavior_enabled" value="true" />
+                <param name="planner_patience" value="10.0" />
+                <param name="controller_patience" value="10.0" />
+            </node>
+        
+   
+</launch>

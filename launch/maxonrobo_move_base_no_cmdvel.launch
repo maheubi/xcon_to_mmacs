@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- if there is a laser. Movebase can also work without a laser -->
+	<arg name="stereo" default="true"/>
+	<arg name="globalplan" default="false"/>
+
+	<!-- inlcude drivers and localisation -->
+	<!--<include file="$(find startup)/launch/robot_pose_ekf.launch" />-->	
+
+		<include file="$(find xcon_to_mmacs)/launch/utils/move_base.launch">
+       	<arg name="stereo" value="$(arg stereo)"/>
+      		<arg name="globalplan" value="$(arg globalplan)"/>
+       	</include>
+       	<include file="$(find xcon_to_mmacs)/launch/maxonrobo_tf.launch" />
+
+		<group if="$(arg stereo)">
+			<!--<include file="$(find xcon_to_mmacs)/launch/utils/zed_rtabmap.launch" />-->
+			<include file="$(find xcon_to_mmacs)/launch/utils/zed_laserscan_nodelet.launch"/>	>							
+		</group>
+		<!--<include file= "$(find xcon_to_mmacs)/launch/provide_map.launch"/>-->
+			
+		<!--<include file="$(find xcon_to_mmacs)/launch/amcl_launch.launch" />-->
+		<!--<include file="$(find xcon_to_mmacs)/launch/gmapping_launch.launch" />-->
+		<!-- XboxController to MasterMACS node-->
+  		<!--<node pkg="xcon_to_mmacs" type="fake_odom" name="fake_robot"/>-->
+<!--
+		<include file="$(find set_waypoints_api)/launch/set_waypoints_api.launch" />
+
+		<include file="$(find follow_waypoints)/launch/follow_waypoints.launch" /> -->
+		<!-- XboxController to MasterMACS node-->
+		<!--<include file="$(find object_detection)/launch/object_detection.launch"/>-->
+		
+		
+  			
+
+	<!--<include file="$(find darknet_ros)/launch/darknet_ros.launch" />-->
+	<!--<node pkg="xcon_to_mmacs" type="cmdvel_driver" name="driver"/>-->
+</launch>
+ 

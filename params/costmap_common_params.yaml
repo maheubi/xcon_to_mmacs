@@ -1,0 +1,28 @@
+map_type:             costmap
+obstacle_range:       5
+raytrace_range:       8.0
+
+#footprint:            [[0.3, 0.5], [0.3, -0.5], [-0.3, -0.5], [-0.3,0.5]]
+robot_radius:        0.6
+inflation_radius:     0.6
+transform_tolerance: 0.5
+
+
+width: 25
+height: 25
+
+
+plugins:
+  - {name: static_layer, type: "costmap_2d::StaticLayer"}
+  - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+  - {name: inflater_layer, type: "costmap_2d::InflationLayer"}
+  - {name: simple_layer, type: "simple_layer_namespace::SimpleLayer"}
+  
+  
+observation_sources:  laser_scan_sensor laser_scan_sensor1 #point_cloud_sensor
+#ponit_cloud_sensor: {sensor_frame: zed_camera_center, data_type: PointCloud2, topic: /zed/zed_nodelet/point_cloud/cloud_registered, marking: true, clearing: true}
+
+laser_scan_sensor: {sensor_frame: zed_base_link, data_type: LaserScan, topic: /zed/scan, marking: true, clearing: true}
+laser_scan_sensor1: {sensor_frame: zed_base_link, data_type: LaserScan, topic: /scan1, marking: true, clearing: true}
+#define paths to different topics 
+

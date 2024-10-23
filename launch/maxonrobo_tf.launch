@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+	
+    <!-- Vectornav  -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="baselink_blvimu" args=" -0.25 0.075 0 0 0 3.14159 /base_link /bl_vimu 10"/> -->
+
+    <!-- single GPS  -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="baselink_blgps" args="0.07 0 0.41 0 0 0 /base_link /bl_gps 10"/> -->
+    <!--<node pkg="tf" type="static_transform_publisher" name="gps_map" args="0 0 0 0 0 0 /map /gps 10"/> -->
+
+    <!-- Leica prims -->
+    <!-- old config node pkg="tf" type="static_transform_publisher" name="baselink_prism" args="-0.0905 0 0.259 0 0 0 base_link leica 10" / --> 
+    <!-- <node pkg="tf" type="static_transform_publisher" name="baselink_prism" args="0.07 0 0.53 0 0 0 base_link prism 10" /> -->
+
+    <!-- start tf broadcaster that provides pose of leica prim wrt map (and of baselink, for reference and debugging) -->
+    <!-- <node pkg="helpers" type="tf2_prism_listener.py" name="prism_tf_node" /> -->
+    
+
+	 <!-- start tf broadcaster that provides ouster lidar pose wrt base_link -->	
+	  <!-- Transformation Configuration ... Setting Up the Relationships Between Coordinate Frames --> 
+
+  <node pkg="tf" type="static_transform_publisher" name="base_link_lfw" args="0.42 0.325 0.12 0 0 0 /base_link /left_front_wheel 30" />
+  <node pkg="tf" type="static_transform_publisher" name="base_link_lbw" args="-0.42 0.325 0.12 0 0 0 /base_link /left_back_wheel 30" />
+  <node pkg="tf" type="static_transform_publisher" name="base_link_rfw" args="0.42 -0.325 0.12 0 0 0 /base_link /right_front_wheel 30" />
+  <node pkg="tf" type="static_transform_publisher" name="base_link_rbw" args="-0.42 -0.325 0.12 0 0 0 /base_link /rigt_back_wheel 30" />
+  <!-- odom to base_footprint transform will be provided by the robot_pose_ekf node -->
+  <!-- map to odom will be provided by the AMCL -->
+  
+	
+	
+	
+</launch>
+
+

@@ -1,0 +1,382 @@
+
+#include "sysdef.mi"
+
+////////////////////////////////////////////////////////////////////
+// Init all SDO
+initSDO0	= 0
+initSDO1	= 0
+initSDO2	= 0
+initSDO3	= 0
+initSDO4	= 0
+initSDO5	= 0
+initSDO6	= 0
+initSDO7	= 0
+initSDO8	= 0
+initSDO9	= 0
+
+	// 01-10
+	sysvar[0x01220101] = initSDO0
+	sysvar[0x01220102] = initSDO0
+	sysvar[0x01220103] = initSDO0
+	sysvar[0x01220104] = initSDO0
+	sysvar[0x01220105] = initSDO0
+	sysvar[0x01220106] = initSDO0
+	sysvar[0x01220107] = initSDO0
+	sysvar[0x01220108] = initSDO0
+	sysvar[0x01220109] = initSDO0
+	sysvar[0x0122010A] = initSDO0
+	// 11-20
+	sysvar[0x0122010B] = initSDO1
+	sysvar[0x0122010C] = initSDO1
+	sysvar[0x0122010D] = initSDO1
+	sysvar[0x0122010E] = initSDO1
+	sysvar[0x0122010F] = initSDO1
+	sysvar[0x01220110] = initSDO1
+	sysvar[0x01220111] = initSDO1
+	sysvar[0x01220112] = initSDO1
+	sysvar[0x01220113] = initSDO1
+	sysvar[0x01220114] = initSDO1
+	// 21-30
+	sysvar[0x01220115] = initSDO2
+	sysvar[0x01220116] = initSDO2
+	sysvar[0x01220117] = initSDO2
+	sysvar[0x01220118] = initSDO2
+	sysvar[0x01220119] = initSDO2
+	sysvar[0x0122011A] = initSDO2
+	sysvar[0x0122011B] = initSDO2
+	sysvar[0x0122011C] = initSDO2
+	sysvar[0x0122011D] = initSDO2
+	sysvar[0x0122011E] = initSDO2
+	// 31-40
+	sysvar[0x0122011F] = initSDO3
+	sysvar[0x01220120] = initSDO3
+	sysvar[0x01220121] = initSDO3
+	sysvar[0x01220122] = initSDO3
+	sysvar[0x01220123] = initSDO3
+	sysvar[0x01220124] = initSDO3
+	sysvar[0x01220125] = initSDO3
+	sysvar[0x01220126] = initSDO3
+	sysvar[0x01220127] = initSDO3
+	sysvar[0x01220128] = initSDO3
+	// 41-50
+	sysvar[0x01220129] = initSDO4
+	sysvar[0x0122012A] = initSDO4
+	sysvar[0x0122012B] = initSDO4
+	sysvar[0x0122012C] = initSDO4
+	sysvar[0x0122012D] = initSDO4
+	sysvar[0x0122012E] = initSDO4
+	sysvar[0x0122012F] = initSDO4
+	sysvar[0x01220130] = initSDO4
+	sysvar[0x01220131] = initSDO4
+	sysvar[0x01220132] = initSDO4
+	// 51-60
+	sysvar[0x01220133] = initSDO5
+	sysvar[0x01220134] = initSDO5
+	sysvar[0x01220135] = initSDO5
+	sysvar[0x01220136] = initSDO5
+	sysvar[0x01220137] = initSDO5
+	sysvar[0x01220138] = initSDO5
+	sysvar[0x01220139] = initSDO5
+	sysvar[0x0122013A] = initSDO5
+	sysvar[0x0122013B] = initSDO5
+	sysvar[0x0122013C] = initSDO5
+	// 61-70
+	sysvar[0x0122013D] = initSDO6
+	sysvar[0x0122013E] = initSDO6
+	sysvar[0x0122013F] = initSDO6
+	sysvar[0x01220140] = initSDO6
+	sysvar[0x01220141] = initSDO6
+	sysvar[0x01220142] = initSDO6
+	sysvar[0x01220143] = initSDO6
+	sysvar[0x01220144] = initSDO6
+	sysvar[0x01220145] = initSDO6
+	sysvar[0x01220146] = initSDO6
+	// 71-80
+	sysvar[0x01220147] = initSDO7
+	sysvar[0x01220148] = initSDO7
+	sysvar[0x01220149] = initSDO7
+	sysvar[0x0122014A] = initSDO7
+	sysvar[0x0122014B] = initSDO7
+	sysvar[0x0122014C] = initSDO7
+	sysvar[0x0122014D] = initSDO7
+	sysvar[0x0122014E] = initSDO7
+	sysvar[0x0122014F] = initSDO7
+	sysvar[0x01220150] = initSDO7
+	// 81-90
+	sysvar[0x01220151] = initSDO8
+	sysvar[0x01220152] = initSDO8
+	sysvar[0x01220153] = initSDO8
+	sysvar[0x01220154] = initSDO8
+	sysvar[0x01220155] = initSDO8
+	sysvar[0x01220156] = initSDO8
+	sysvar[0x01220157] = initSDO8
+	sysvar[0x01220158] = initSDO8
+	sysvar[0x01220159] = initSDO8
+	sysvar[0x0122015A] = initSDO8
+	// 91-100
+	sysvar[0x0122015B] = initSDO9
+	sysvar[0x0122015C] = initSDO9
+	sysvar[0x0122015D] = initSDO9
+	sysvar[0x0122015E] = initSDO9
+	sysvar[0x0122015F] = initSDO9
+	sysvar[0x01220160] = initSDO9
+	sysvar[0x01220161] = initSDO9
+	sysvar[0x01220162] = initSDO9
+	sysvar[0x01220163] = initSDO9
+	sysvar[0x01220164] = initSDO9
+
+delay 200
+
+//#pragma NOIMPLICIT
+#define CAN_TIMER   1
+
+
+//CANopen Basic Data
+	//Transmit PDO Parameters
+ #define CO_TXPDO1_CONF             (0x1800)	//Largest Index;		Type: U8
+ #define CO_TXPDO2_CONF             (0x1801)	//COB-ID;				Type: U32
+ #define CO_TXPDO3_CONF             (0x1802)	//Transmission Tyoe;	Type: U8
+ #define CO_TXPDO4_CONF             (0x1803)	//Inhibit Time;			Type: U16
+	//Receive PDO Parameters
+ #define CO_RXPDO1_CONF             (0x1400)	//Largest Index;		Type: U8
+ #define CO_RXPDO2_CONF             (0x1401)	//COB-ID;				Type: U32
+ #define CO_RXPDO3_CONF             (0x1402)	//Transmission Tyoe;	Type: U8
+ #define CO_RXPDO4_CONF             (0x1403)	//Inhibit Time;			Type: U16
+
+	//Transmit PDO Mapping
+ #define CO_TXPDO1_MAP              (0x1A00)	//Mapped Object Count	Type: U8
+	//Receive PDO Mapping
+ #define CO_RXPDO1_MAP              (0x1600)	//Mapped Object Count	Type: U8
+
+	//General Information
+ #define CO_HEARTB_TIME             (0x1017)	//HeartBeat Producer	Type: U16	[ms]
+
+	//CANopen DS402 Device Profile Data
+ #define CO_CNTRLWORD               (0x6040)	//Control Word1-8		Type: U16	(Must be handled by the application )
+ #define CO_MODEOFOP                (0x6060)	//ModesofOperation1-8	Type: S8
+
+	//System variable (Pseudo array) reads system values.
+ #define SYS_CANOPMASTER			sysvar[(0x01220200+69)]
+
+
+
+ #define INDEX_REG_ACTPOS(ax)		(0x01250001 + ((ax-1) << 8))        			// actual position in Quadcounts
+ #define INDEX_REG_TRACKERR(ax)		(0x01250006 + ((ax-1) << 8))        			// track error
+ #define INDEX_AMP_GETCUR(ax)		(HWAMP_PROCESS_INDEX((ax-1), PO_HWAMP_CURRENT))	// current in mA
+ #define INDEX_REG_REFERENCE(ax)	(0x01250010 + ((ax-1) << 8))					// Modusabhängiger Referenzwert in 1/16384
+ #define INDEX_REG_AVEL(ax)			(0x01250004 + ((ax-1) << 8))					// Geschwindigkeit in Quadcounts pro 20ms
+ #define INDEX_PFG_VCMDSIGNED(ax)	(0x012500B5 + ((ax-1) << 8))					// Geschwindigkeit in Quadcounts pro 1ms
+ #define INDEX_REG_COMPOS(ax)		(0x01250002 + ((ax-1) << 8))					// Sollpostion in Quadcounts
+ #define INDEX_REG_IAVEL(ax)		(0x0125000C + ((ax-1) << 8))					// Geschwindigkeit in Quadcou nts pro 1ms
+
+
+ #define SYSVAR_REG_ACTPOS(ax)		sysvar[INDEX_REG_ACTPOS(ax)]					// Istposition in Quadcounts
+ #define SYSVAR_REG_TRACKERR(ax)	sysvar[INDEX_REG_TRACKERR(ax)]					// Schleppfehler
+ #define SYSVAR_AMP_GETCUR(ax)		sysvar[INDEX_AMP_GETCUR(ax)]					// Strom in mA
+ #define SYSVAR_REG_REFERENCE(ax)	sysvar[INDEX_REG_REFERENCE(ax)]					// Modusabhängiger Referenzwert in 1/16384
+ #define SYSVAR_REG_AVEL(ax)        sysvar[INDEX_REG_AVEL(ax)]						// Geschwindigkeit in Quadcounts pro 20ms
+ #define SYSVAR_PFG_VCMDSIGNED(ax)  sysvar[INDEX_PFG_VCMDSIGNED(ax)]				// Geschwindigkeit in Quadcounts pro 1ms
+ #define SYSVAR_REG_COMPOS(ax)      sysvar[INDEX_REG_COMPOS(ax)]					// Sollpostion in Quadcounts
+ #define SYSVAR_REG_IAVEL(ax)       sysvar[INDEX_REG_IAVEL(ax)]						// Geschwindigkeit in Quadcounts pro 1ms
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------
+// EPOS4 Setup
+//----------------------------------------------------------------------------------------------------------------------
+
+
+///////////////////////////////////////////////////////////////////////////////
+long MaxonEpos4_SetupVirtAmp(long axe, long maxrpm)
+///////////////////////////////////////////////////////////////////////////////
+{
+    // Virtual Amplifier
+    long modno, busmodno
+
+    modno = axe-1  // virtual amplifiers have a fixed connection to axes number, axes 1 uses amplifier 0.
+    busmodno = axe-1  // normally busmodno 0 is used for axis 1 and so on
+
+    VIRTAMP_PARAM(modno,VIRTAMP_PISRC_CMDWORD)    = AXE_PROCESS_SRCINDEX(modno,REG_CNTRLWORD)
+    VIRTAMP_PARAM(modno,VIRTAMP_PISRC_REFPOS)     = AXE_PROCESS_SRCINDEX(modno,REG_COMPOS)
+    VIRTAMP_PARAM(modno,VIRTAMP_PISRC_REFVEL)     = AXE_PROCESS_SRCINDEX(modno,REG_REFERENCE)
+    VIRTAMP_PARAM(modno,VIRTAMP_PISRC_REFACC)     = AXE_PROCESS_SRCINDEX(modno,PID_FFACCPART)
+    VIRTAMP_PARAM(modno,VIRTAMP_PISRC_STATUS)     = BUSMOD_PROCESS_SRCINDEX(busmodno,PO_BUSMOD_VALUE1)
+    VIRTAMP_PARAM(modno,VIRTAMP_PISRC_CURRENT)    = BUSMOD_PROCESS_SRCINDEX(modno,PO_BUSMOD_VALUE2)  // actual torque
+
+    VIRTAMP_PARAM(modno,VIRTAMP_CNTRLW_PWROFF)    = 0x06
+    VIRTAMP_PARAM(modno,VIRTAMP_CNTRLW_PWRONDIS)  = 0x06
+    VIRTAMP_PARAM(modno,VIRTAMP_CNTRLW_PWRONENP)  = 0x0F
+    VIRTAMP_PARAM(modno,VIRTAMP_CNTRLW_PWRONENN)  = 0x0F
+    VIRTAMP_PARAM(modno,VIRTAMP_CNTRLW_QUICKSTOP) = 0x02
+    VIRTAMP_PARAM(modno,VIRTAMP_CNTRLW_RESET)     = 0x80
+    VIRTAMP_PARAM(modno,VIRTAMP_REF100PERC)       = maxrpm      // rpm
+    VIRTAMP_PARAM(modno,VIRTAMP_REFLIMIT)         = 2*maxrpm    // rpm
+    VIRTAMP_PARAM(modno,VIRTAMP_STOPDELAY)        = 0x0
+
+    VIRTAMP_PARAM(modno,VIRTAMP_ERROR_BITMASK)    = 0x08
+    VIRTAMP_PARAM(modno,VIRTAMP_ERROR_POLARITY)   = 1
+
+    VIRTAMP_PARAM(modno,VIRTAMP_MODE) = 1                       // has to be the last one because it activates all
+}
+
+///////////////////////////////////////////////////////////////////////////////
+long MaxonEpos4_SetupVirtCntin(long axe)
+///////////////////////////////////////////////////////////////////////////////
+{
+    long modno
+    modno = axe-1
+
+    VIRTCOUNTIN_PARAM(modno,VIRTCNTIN_PISRC_COUNTER) = BUSMOD_PROCESS_SRCINDEX(axe-1,PO_BUSMOD_VALUE3)
+    VIRTCOUNTIN_PARAM(modno,VIRTCNTIN_MODE) = 0   // Position, source is a position value and difference is added from last value
+}
+
+///////////////////////////////////////////////////////////////////////////////
+long MaxonEpos4_SetupBusModule(long axis, long canid, long pdonumber)
+///////////////////////////////////////////////////////////////////////////////
+{
+    long busmod
+
+    busmod = axis-1
+    BUSMOD_PARAM(busmod, BUSMOD_MODE) =  0                     // delete existing bus module
+
+    BUSMOD_PARAM(busmod, BUSMOD_MODE) =  1                     // create bus module
+    BUSMOD_PARAM(busmod, BUSMOD_LEN_TXPDO1 + pdonumber-1) =  6
+    BUSMOD_PARAM(busmod, BUSMOD_BUSNO) =  canid % 100000       // Bus number (0 = master, 1 = slave CAN bus)
+    BUSMOD_PARAM(busmod, BUSMOD_ID)   =  canid mod 1000        // CAN Id for this bus module
+    BUSMOD_PARAM(busmod, BUSMOD_SYNC) =  1                     // Sync active
+    BUSMOD_PARAM(busmod, BUSMOD_GUARDTIME) =  0                // no guarding
+
+    BUSMOD_PARAM(busmod, BUSMOD_PISRC_INPUT1) =  VIRTAMP_PROCESS_SRCINDEX(axis-1,PO_VIRTAMP_CMDWORD)    // CMD Word
+    BUSMOD_PARAM(busmod, BUSMOD_PISRC_INPUT2) =  VIRTAMP_PROCESS_SRCINDEX(axis-1,PO_VIRTAMP_REFVEL)    // velocity setpoint
+
+
+    BUSMOD_PARAM(busmod, BUSMOD_TXMAP_INPUT1) =  pdonumber*0x01000000 + 2*0x00010000 + 0   // pdo ; length in bytes; bytes offset
+    BUSMOD_PARAM(busmod, BUSMOD_TXMAP_INPUT2) =  pdonumber*0x01000000 + 4*0x00010000 + 2   // pdo ; length in bytes; bytes offset
+
+
+    BUSMOD_PARAM(busmod, BUSMOD_RXMAP_POVALUE1) =  pdonumber*0x01000000 + 2*0x00010000 + 0   // pdo ; length in bytes; bytes offset  // status
+    BUSMOD_PARAM(busmod, BUSMOD_RXMAP_POVALUE2) =  pdonumber*0x01000000 + 2*0x00010000 + 2   // pdo ; length in bytes; bytes offset  // act_curr
+    BUSMOD_PARAM(busmod, BUSMOD_RXMAP_POVALUE3) =  pdonumber*0x01000000 + 4*0x00010000 + 4   // pdo ; length in bytes; bytes offset  // actpos
+
+    BUSMOD_PARAM(busmod, BUSMOD_MODE) =  2                     // Start bus module
+
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+long MaxonEpos4_SetupSdoParam(long busid, long pdonumber)
+///////////////////////////////////////////////////////////////////////////////
+{
+    long nodeid, last_value
+
+    nodeid = busid mod 100000
+    print "nodeid: ",nodeid
+
+	sdowrite (busid) CO_MODEOFOP  0  9    // cycle synchronous velocity mode
+
+    // reset Transmittype
+    sdowrite (busid) CO_TXPDO1_CONF    2  255    // TxPDO1 Transmittype
+    sdowrite (busid) CO_TXPDO2_CONF    2  255    // TxPDO2 Transmittype
+    sdowrite (busid) CO_TXPDO3_CONF    2  255    // TxPDO3 Transmittype
+    sdowrite (busid) CO_TXPDO4_CONF    2  255    // TxPDO4 Transmittype
+
+
+    // the pdos have to be disabled for configuring
+    last_value = (sdoread (busid) CO_TXPDO1_CONF    1 )
+    sdowrite (busid) CO_TXPDO1_CONF    1 (last_value | 0x80000000) // disable pdo 1
+    last_value = (sdoread (busid) CO_TXPDO2_CONF    1 )
+    sdowrite (busid) CO_TXPDO2_CONF    1 (last_value | 0x80000000) // disable pdo 2
+    last_value = (sdoread (busid) CO_TXPDO4_CONF    1 )
+    sdowrite (busid) CO_TXPDO3_CONF    1 (last_value | 0x80000000) // disable pdo 3
+    last_value = (sdoread (busid) CO_TXPDO4_CONF    1 )
+    sdowrite (busid) CO_TXPDO4_CONF    1 (last_value | 0x80000000) // disable pdo 4
+
+
+    //the pdos have to be disabled for configuring
+    last_value = (sdoread (busid) CO_RXPDO1_CONF    1 )
+    sdowrite (busid) CO_RXPDO1_CONF    1 (last_value | 0x80000000) // disable pdo 1
+    last_value = (sdoread (busid) CO_RXPDO2_CONF    1 )
+    sdowrite (busid) CO_RXPDO2_CONF    1 (last_value | 0x80000000) // disable pdo 2
+    last_value = (sdoread (busid) CO_RXPDO3_CONF    1 )
+    sdowrite (busid) CO_RXPDO3_CONF    1 (last_value | 0x80000000) // disable pdo 3
+    last_value = (sdoread (busid) CO_RXPDO4_CONF    1 )
+    sdowrite (busid) CO_RXPDO4_CONF    1 (last_value | 0x80000000) // disable pdo 4
+
+
+
+    // Now we setup the correct PDO transmission for Tx and Rx
+    sdowrite (busid) (CO_TXPDO1_CONF + pdonumber-1)    2  1    // TxPDO Transmittype SYNC
+    sdowrite (busid) (CO_RXPDO1_CONF + pdonumber-1)    2  1    // RxPDO Transmittype SYNC
+
+    // config RX PDO
+    sdowrite (busid) (CO_RXPDO1_MAP + pdonumber-1) 0x00 0     // disable
+    sdowrite (busid) (CO_RXPDO1_MAP + pdonumber-1) 0x01 0x60400010 // controlword
+    sdowrite (busid) (CO_RXPDO1_MAP + pdonumber-1) 0x02 0x60FF0020 // targetvel
+    sdowrite (busid) (CO_RXPDO1_MAP + pdonumber-1) 0x00 2     // enable
+
+    // config TX PDO
+    sdowrite (busid) (CO_TXPDO1_MAP + pdonumber-1) 0x00 0     // disable
+    sdowrite (busid) (CO_TXPDO1_MAP + pdonumber-1) 0x01 0x60410010 // statusword
+    sdowrite (busid) (CO_TXPDO1_MAP + pdonumber-1) 0x02 0x60770010 // act_curr (motor torque 0x6077)
+    sdowrite (busid) (CO_TXPDO1_MAP + pdonumber-1) 0x03 0x60640020   // actpos
+    sdowrite (busid) (CO_TXPDO1_MAP + pdonumber-1) 0x00 3     // enable
+
+    // fill in the wanted pdo
+    sdowrite (busid) (CO_TXPDO1_CONF +pdonumber-1)   1 (0x80000180 + (pdonumber-1)*0x100 + nodeid) // fill in pdo
+    sdowrite (busid) (CO_RXPDO1_CONF +pdonumber-1)   1 (0x80000200 + (pdonumber-1)*0x100 + nodeid) // fill in pdo
+
+    // enable
+    sdowrite (busid) (CO_TXPDO1_CONF +pdonumber-1)   1 (0x00000180 + (pdonumber-1)*0x100 + nodeid) // enable pdo
+    sdowrite (busid) (CO_RXPDO1_CONF +pdonumber-1)   1 (0x00000200 + (pdonumber-1)*0x100 + nodeid) // enable pdo
+
+    sdowrite (busid) 0x60C2            1  CAN_TIMER                 //interpolation time periode value
+  //  sdowrite (busid) CO_HEARTB_TIME    0  0 //100  // send heartbeat every 100 ms
+
+
+}
+
+///////////////////////////////////////////////////////////////////////////////
+long MaxonEpos4_SetupAxisParam(long axis, long maxrpm)
+///////////////////////////////////////////////////////////////////////////////
+{
+    // Encoder setting 1qc = 1uu
+    set posencrev x(axis) 1
+    set posencqc  x(axis) C_ENC_QC
+    set posfact_z x(axis) 1
+    set posfact_n x(axis) 1
+    set feedrev   x(axis) 1
+    set feeddist  x(axis) C_ENC_QC
+
+    set velmax  x(axis) maxrpm
+    set rampmin x(axis) 300
+
+    vel x(axis) 80
+    acc x(axis) 50
+    dec x(axis) 50
+
+
+    set ffvel x(axis) 1000
+    set ffacc x(axis) 0
+    set kprop x(axis) 40
+    set kder  x(axis) 100
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+long SetupDrive_EPOS4(long axis, long canid, long pdonumber, long maxrpm)
+///////////////////////////////////////////////////////////////////////////////
+{
+    MaxonEpos4_SetupVirtAmp(axis, maxrpm)
+    MaxonEpos4_SetupBusModule(axis, canid, pdonumber)
+    MaxonEpos4_SetupSdoParam  (canid, pdonumber)
+    MaxonEpos4_SetupAxisParam (axis, maxrpm)
+    MaxonEpos4_SetupVirtCntin(axis)   // has to be last, because virtcntin is reset by set encoder in AxisParam
+
+    PRINT "Setup of EPOS4 completed, AxisId=", axis, ", CANId=", canid
+}
+
+

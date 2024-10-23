@@ -1,0 +1,8 @@
+<launch>
+
+
+
+ <!-- XboxController to MasterMACS node-->
+  <node pkg="xcon_to_mmacs" type="fake_odom" name="fake"/>
+
+</launch>

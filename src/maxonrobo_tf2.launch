@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+	
+    <!-- Vectornav  -->
+    <node pkg="tf" type="static_transform_publisher" name="baselink_blvimu" args=" -0.25 0.075 0 0 0 3.14159 /base_link /bl_vimu 10"/>
+
+    <!-- Leica prims -->
+    <!-- old config node pkg="tf" type="static_transform_publisher" name="baselink_prism" args="-0.0905 0 0.259 0 0 0 base_link leica 10" / -->
+    <node pkg="tf" type="static_transform_publisher" name="baselink_prism" args="0.15 -0.03 0.53 0 0 0 base_link prism 10" />    
+
+    <!-- Alphasense Position Sensor -->
+    <!-- location of ap sensor is irrelevant, as sensor translates position to base_link itself! -->
+    <!-- link sbot base_link and map -->	
+    <node pkg="tf" type="static_transform_publisher" name="maxonrobo_map" args="0 0 0 0 0 0 /alphasense/ros_pose /base_link 10"/>	
+
+    <!-- start tf broadcaster that sets the map to be the alphasense world -->
+    <node pkg="alphasense" type="alphasense_tf2_broadcaster.py" name="alpha_tf_node" />
+
+</launch>
